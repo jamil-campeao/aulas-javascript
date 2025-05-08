@@ -143,12 +143,18 @@ do {
 
         decisaoOutroSaque = Number(prompt("Deseja realizar outro saque? (1 - Sim, 0 - Não) "));
 
+        decisao = decisaoOutroSaque;
+
         if (decisaoOutroSaque === 1) {
             fRealizaSaque();
         }
+        
+        console.log(`Saldo restante R$: ${conta.getSaldo()}`);
+        
     }
 
 } while (decisao === 1);
+
 
 function fRealizaSaque() {
     do {
