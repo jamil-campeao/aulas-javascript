@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <body>
+            <h1>Cumprimento</h1>
+            <label>Nome</label>
+            <input type="text" name="texto-digitado" id="texto-digitado">
+            <button onclick="configuraMensagem()">OK</button>
+        </body>  
+        <div id="cor">
+
+        </div>
+
+        <button onclick="mudaCor()">Mudar cor da div</button>
+
+        <script>
+            function configuraMensagem(texto) {
+                const nome = document.getElementById("texto-digitado").value;
+
+                if (nome === "") {
+                    alert("Nome não informado");
+                    return
+                }
+                alert(`Olá ${nome}`)
+                
+            }
+
+            function mudaCor() {
+                let div = document.getElementById("cor");
+
+                if (div.style.backgroundColor === "blue") {
+                    div.style.backgroundColor = "white";
+                }
+                else {
+                    div.style.backgroundColor = "blue"
+                }
+
+                div.innerHTML = "texto teste dinamico";
+            }
+        </script>  
+
+    </head>
+
+</html>
