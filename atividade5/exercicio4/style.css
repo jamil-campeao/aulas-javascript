@@ -1,0 +1,150 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #333;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    color: #007bff;
+    margin-bottom: 30px;
+    font-size: 2.4em;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+    font-size: 1.05em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select {
+    width: calc(100% - 24px); /* Ajusta para padding e borda */
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 1.0em;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+.radio-group,
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.radio-group label,
+.checkbox-group label {
+    display: inline-flex; /* Para alinhar o input com o texto */
+    align-items: center;
+    font-weight: normal;
+    color: #333;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.radio-group input[type="radio"],
+.checkbox-group input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 25px;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}
+
+button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.2);
+}
+
+.resumo-reserva {
+    margin-top: 40px;
+    padding: 25px;
+    background-color: #e6f7ff;
+    border: 1px solid #b3e0ff;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    display: none;
+}
+
+.resumo-reserva h2 {
+    color: #0056b3;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    text-align: center;
+}
+
+.resumo-reserva p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    font-size: 1.05em;
+}
+
+.resumo-reserva strong {
+    color: #003366;
+}
+
+.resumo-reserva .agradecimento {
+    margin-top: 25px;
+    font-style: italic;
+    color: #4CAF50;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.1em;
+}

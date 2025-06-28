@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Participantes</title>
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Participantes</h1>
+
+        <form id="cadastroParticipanteForm">
+            <div class="form-group">
+                <label for="nomeParticipante">Nome do Participante:</label>
+                <input type="text" id="nomeParticipante" required>
+            </div>
+
+            <div class="form-group">
+                <label for="idadeParticipante">Idade:</label>
+                <input type="number" id="idadeParticipante" min="0" required>
+            </div>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+
+        <div id="listaParticipantes" class="lista-participantes">
+            <h2>Participantes Cadastrados:</h2>
+            <ul id="participantesUl">
+                </ul>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script> </body>
+</html>

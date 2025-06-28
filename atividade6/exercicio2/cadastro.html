@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Usuário</h1>
+        <form id="cadastroForm">
+            <div class="form-group">
+                <label for="nomeCompleto">Nome Completo:</label>
+                <input type="text" id="nomeCompleto" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dataNascimento">Data de Nascimento:</label>
+                <input type="date" id="dataNascimento" required>
+            </div>
+
+            <div class="form-group">
+                <label for="genero">Gênero:</label>
+                <select id="genero" required>
+                    <option value="">Selecione</option>
+                    <option value="Feminino">Feminino</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Outro">Outro</option>
+                    <option value="Prefiro não informar">Prefiro não informar</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" required minlength="6">
+            </div>
+
+            <div class="form-group">
+                <label for="confirmarSenha">Confirmar Senha:</label>
+                <input type="password" id="confirmarSenha" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" placeholder="(XX) XXXXX-XXXX" required pattern="\(\d{2}\)\s\d{5}-\d{4}">
+            </div>
+
+            <div class="form-group">
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" required maxlength="9" placeholder="XXXXX-XXX">
+            </div>
+            
+            <div class="form-group">
+                <label for="rua">Rua:</label>
+                <input type="text" id="rua" required>
+            </div>
+
+            <div class="form-group">
+                <label for="numeroResidencia">Número:</label>
+                <input type="text" id="numeroResidencia" required>
+            </div>
+
+            <div class="form-group">
+                <label for="bairro">Bairro:</label>
+                <input type="text" id="bairro" required>
+            </div>
+
+            <div class="form-group">
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" required readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="estado">Estado:</label>
+                <input type="text" id="estado" required readonly>
+            </div>
+
+            <button type="submit">Cadastrar</button>
+            <p class="message">Já tem conta? <a href="login.html">Faça login aqui!</a></p>
+        </form>
+    </div>
+
+    <script src="js/cadastro.js"></script>
+</body>
+</html>
