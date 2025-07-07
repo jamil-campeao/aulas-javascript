@@ -29,14 +29,14 @@ form.addEventListener("submit", async (e) => {
   try {
     if (tarefaId.value) {
       // Atualizar
-      await fetch(`http://localhost:3000/tarefas/${tarefaId.value}`, {
+      await fetch(`/tarefas/${tarefaId.value}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(dados),
       });
     } else {
       // Criar nova
-      await fetch("http://localhost:3000/tarefas", {
+      await fetch("/tarefas", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(dados),
@@ -57,7 +57,7 @@ async function listarTarefas() {
   lista.innerHTML = "";
 
   try {
-    const resp = await fetch("http://localhost:3000/tarefas");
+    const resp = await fetch("/tarefas");
     const tarefas = await resp.json();
 
     tarefas.forEach((tarefa) => {
@@ -86,7 +86,7 @@ window.editarTarefa = function (id, tituloTexto, descricaoTexto) {
 window.excluirTarefa = async function (id) {
   if (confirm("Deseja realmente excluir esta tarefa?")) {
     try {
-      await fetch(`http://localhost:3000/tarefas/${id}`, {
+      await fetch(`/tarefas/${id}`, {
         method: "DELETE",
       });
       listarTarefas();
