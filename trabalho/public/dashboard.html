@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard - Task Manager</title>
+  <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Gestão de Tarefas</h2>
+
+    <button id="logoutBtn">Logout</button>
+
+    <form id="formTarefa">
+      <input type="hidden" id="tarefaId" />
+      <label for="titulo">Título:</label>
+      <input type="text" id="titulo" required />
+
+      <label for="descricao">Descrição:</label>
+      <textarea id="descricao" required></textarea>
+
+      <button type="submit">Salvar</button>
+    </form>
+
+    <h3>Minhas Tarefas</h3>
+    <ul id="listaTarefas"></ul>
+  </div>
+
+  <script src="./js/dashboard.js"></script>
+</body>
+</html>
